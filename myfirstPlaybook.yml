@@ -16,5 +16,5 @@
       state: present
   - name: install webserver
     yum:
-      name: apache2
-      state: present
+      name: httpd
+      state: latest
