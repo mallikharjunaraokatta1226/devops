@@ -22,12 +22,19 @@
   
 
   # Using handlers we can resuse the tak for several tasks
+  # code resusabiliy 
+  # if change theer then only handlers will be called and notified
 
 
   - name: install webserver
     yum:
       name: httpd
       state: latest
+    
+  - name: install webserver
+    template:
+      src: myIndex.j2
+      dest: /var/www/html/index/html
     notify: restartwebserver
 
   handlers:
