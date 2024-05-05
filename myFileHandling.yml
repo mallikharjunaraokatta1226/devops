@@ -31,10 +31,10 @@
       name: httpd
       state: latest
     
-  - name: install webserver
+  - name: I want to copy index fle into node side
     template:
       src: myIndex.j2
-      dest: /var/www/html/index/html
+      dest: /var/www/html/index.html
     notify: restartwebserver
 
   handlers:
