@@ -1,6 +1,6 @@
 ---
 - name: update package
-  dnf: update_cacche=yes
+  dnf: update_cache=yes
 
 - name: install java software
   dnf:
