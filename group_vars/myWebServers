@@ -1,0 +1,5 @@
+---
+myGitPackOnRedhat: git
+myTreePackOnRedhat: tree
+myWgetPackOnRedhat: wget
+myWebPackOnRedhat: httpd
