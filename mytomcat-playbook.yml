@@ -2,4 +2,4 @@
 - hosts: appservers
   become: yes
   roles:
-    role: mytomrole
+  - role: mytomrole
