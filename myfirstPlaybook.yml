@@ -4,29 +4,29 @@
   tasks:
   - name: install git
     yum:
-      name: {{myGitPackOnRedhat}}
+      name: "{{myGitPackOnRedhat}}"
       state: present
   - name: install tree
     yum:
-      name: {{myTreePackOnRedhat}}
+      name: "{{myTreePackOnRedhat}}"
       state: present
   - name: install wget
     yum:
-      name: {{myWgetPackOnRedhat}}
+      name: "{{myWgetPackOnRedhat}}"
       state: present
   - name: install webserver
     yum:
-      name: {{myWebPackOnRedhat}}
+      name: "{{myWebPackOnRedhat}}"
       state: latest
   - name: stop webserver
     service:
-      name: {{myWebPackOnRedhat}}
+      name: "{{myWebPackOnRedhat}}"
       state: stopped
   - name: restart webserver
     service:
-      name: {{myWebPackOnRedhat}}
+      name: "{{myWebPackOnRedhat}}"
       state: restarted
   - name: reload webserver
     service:
-      name: {{myWebPackOnRedhat}}
+      name: "{{myWebPackOnRedhat}}"
       state: reloaded
