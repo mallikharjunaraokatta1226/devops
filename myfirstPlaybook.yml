@@ -30,3 +30,7 @@
     service:
       name: "{{myWebPackOnRedhat}}"
       state: reloaded
+  - name: Install java
+    yum:
+      name: "{{myJavaPackOnRedhat}}"
+      state: present
