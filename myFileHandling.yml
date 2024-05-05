@@ -28,10 +28,10 @@
     yum:
       name: httpd
       state: latest
-    notify: restart webserver
+    notify: restartwebserver
 
   handlers:
-  - name: restart webserver
+  - name: restartwebserver
     service:
       name: httpd
       state: restarted
