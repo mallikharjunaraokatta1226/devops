@@ -6,7 +6,4 @@
     file: 
       path: /home/sirimalli/myFolder
       state: directory
-  - name: I want to create file
-    file: 
-      path: /home/sirimalli/myFolder/myFile
-      state: touch
+  - include_tasks: myFile.yml 
