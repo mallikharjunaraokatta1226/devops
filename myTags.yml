@@ -1,0 +1,25 @@
+# i want to execute 1 task out of mnay
+
+---
+- hosts: 172.31.0.190
+  become: yes
+  tasks:
+  - name: I want to install only git
+    yum:
+      name: git
+      state: present
+    tags: myGitTag
+  - name: I want to install only tree
+    yum:
+      name: tree
+      state: present
+    tags: myTreeTag 
+  - name: I want to install only wget
+    yum:
+      name: wget
+      state: present
+    tags: myWgetTag
+
+
+# ansible-playbook -i myhosts myTags.yml --tags="myGitTag"
+# ansible-playbook -i myhosts myTags.yml --skip-tags="myWgetTag,myTreeTag"
