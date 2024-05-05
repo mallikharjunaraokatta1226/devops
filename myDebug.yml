@@ -8,3 +8,14 @@
   - name: I want to display first task myResult
     debug:
       msg: "{{myResult}}"
+  # Based on above result i want to execute the below flow 
+  - name: install git
+    yum:
+      name: git
+      state: present
+    when: myResult.stdout != ""
+  - name: install tree
+    yum:
+      name: tree
+      state: present
+    when: myResult.stdout == ""
