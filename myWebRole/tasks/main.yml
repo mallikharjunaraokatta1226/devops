@@ -1,2 +1,6 @@
 ---
 # tasks file for myWebRole
+- name: Install apache webserver
+  yum:
+    name: httpd
+    state: present
