@@ -1,0 +1,16 @@
+---
+- name: download tomcat tar file
+  get_url:
+    url: https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.55/bin/apache-tomcat-9.0.55.tar.gz
+    dest: /home/sirimalli/apache-tomcat-9.0.55.tar.gz
+    force_basic_auth: yes
+
+- name: create tomcat folder
+  file: 
+    path: /opt/tomcat
+    state: directory
+
+- name: extract the tar file
+  command:
+    cmd: tar -zvxf /home/sirimalli/apache-tomcat-9.0.55.tar.gz -C /opt/tomcat --strip-components=1
+    creates: /opt/tomcat/LICENSE
