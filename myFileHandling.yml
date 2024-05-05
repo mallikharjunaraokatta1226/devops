@@ -20,3 +20,19 @@
       dest: /home/sirimalli/myFolder/apache-tomcat-10.0.0.tar.gz
       force_basic_auth: yes
   
+
+  # Using handlers we can resuse the tak for several tasks
+
+
+  - name: install webserver
+    yum:
+      name: httpd
+      state: latest
+    notify: restart webserver
+
+  handlers:
+  - name: restart webserver
+    service:
+      name: httpd
+      state: restarted
+  
