@@ -6,4 +6,10 @@
     file: 
       path: /home/sirimalli/myFolder
       state: directory
+
   - include_tasks: myFile.yml 
+
+  - name: copy the file into node side
+    copy: 
+      src: myTestFile
+      dest: /home/sirimalli/myFolder
