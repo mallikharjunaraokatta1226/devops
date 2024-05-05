@@ -16,7 +16,7 @@
 
   - name: I want to donwload internet file
     get_url:
-      url: http://example.com/path/file.conf
-      dest: /home/sirimalli/myFolder/file.conf
+      url: https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.0/bin/apache-tomcat-10.0.0.tar.gz
+      dest: /home/sirimalli/myFolder/apache-tomcat-10.0.0.tar.gz
       force_basic_auth: yes
   
