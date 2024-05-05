@@ -1,5 +1,5 @@
 ---
-- host: 172.31.0.190
+- hosts: 172.31.0.190
   become: yes
   tasks:
   - name: I want to execute linu command
