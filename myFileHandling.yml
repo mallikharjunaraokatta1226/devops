@@ -17,6 +17,6 @@
   - name: I want to donwload internet file
     get_url:
       url: http://example.com/path/file.conf
-      dest: /home/sirimalli/myFolder/
+      dest: /home/sirimalli/myFolder/file.conf
       force_basic_auth: yes
   
